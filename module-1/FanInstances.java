@@ -2,18 +2,18 @@
  * Module 1 Fan Class Assignment
  * 1/5/2023*/
 
-//ADD COMMENTS FOR EVERYTHING!!!
 
-
-//Public class of the file that will contain the main method for creating instances of Fan and 
-//executing code regarding these instances
-public class Mod1FanInstances{
+/*Public class of the file that will contain the main method for creating instances of Fan and 
+ * executing code regarding these instances*/
+public class FanInstances{
     //Main method
     public static void main(String[] args){
         //Create two instances of fan, one default and one custom
         Fan defaultFan = new Fan();
         Fan customFan = new Fan(3, true, 100, "pink");
 
+        /*Print out details about the fan instances: initial specs, changes made, and current specs
+         * after changes*/
         System.out.println("");
         System.out.println("");
         System.out.println("The default-built fan's initial specifications are: ");   
@@ -76,41 +76,49 @@ class Fan{
         color = customColor;
     }
 
-
+    //setter for fan speed number value
     public void setSpeed(int setSpeed){
         if(on == true){
             speed = setSpeed;
         }
     }
-
+    
+    //getter for fan speed number value
     public int getSpeed(){
         return speed;
     }
 
+    //setter for fan on state boolean value
     public void setOn(boolean setOn){
         on = setOn;
     }
 
+    //getter for fan on state boolean value
     public boolean getOn(){
         return on;
     }
 
+    //setter for fan radius number value
     public void setRadius(int setRadius){
         radius = setRadius;
     }
 
+    //getter for fan radius number value
     public int getRadius(){
         return radius;
     }
 
+    //setter for fan color value
     public void setColor(String setColor){
         color = setColor;
     }
 
+    //getter for fan color value
     public String getColor(){
         return color;
     }
 
+    //toString() method override to customize the results
     public String toString(){
         System.out.println();
         return "On: " + on + ", Speed: " + speed + ", Radius: " + radius + ", Color: " + color;
