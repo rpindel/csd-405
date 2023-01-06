@@ -12,14 +12,14 @@ public class FanInstances{
         Fan defaultFan = new Fan();
         Fan customFan = new Fan(3, true, 100, "pink");
 
-        /*Print out details about the fan instances: initial specs, changes made, and current specs
+        /*Print out details about the fan instances: initial state, changes made, and current state
          * after changes*/
         System.out.println("");
         System.out.println("");
-        System.out.println("The default-built fan's initial specifications are: ");   
+        System.out.println("The default-built fan's initial state is: ");   
         System.out.println(defaultFan);
         System.out.println("");
-        System.out.println("The custom-built fan's initial specifications are: ");
+        System.out.println("The custom-built fan's initial state is: ");
         System.out.println(customFan);
         System.out.println("");
         System.out.println("");
@@ -28,8 +28,8 @@ public class FanInstances{
         defaultFan.setOn(true);
         System.out.println(defaultFan.getOn());
 
-        System.out.println("Changing the default fan's speed to: ");
-        defaultFan.setSpeed(1);
+        System.out.println("Changing the default fan's speed to slow: ");
+        defaultFan.setSpeed(Fan.SLOW);
         System.out.println(defaultFan.getSpeed());
 
         System.out.println("Changing the custom fan's radius to (not sure how but...): ");
@@ -61,8 +61,8 @@ class Fan{
     static final int SLOW = 1;
     static final int MEDIUM = 2;
     static final int FAST = 3;
-    private int speed = 0;
-    private boolean on;
+    private int speed = STOPPED;
+    private boolean on = false;
     private int radius = 6;
     private String color = "white";
 
