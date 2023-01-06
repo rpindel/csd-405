@@ -23,22 +23,20 @@ public class FanInstances{
         System.out.println(customFan);
         System.out.println("");
         System.out.println("");
-
-        System.out.println("Changing the default fan's on status to: ");
-        defaultFan.setOn(true);
-        System.out.println(defaultFan.getOn());
-
-        System.out.println("Changing the default fan's speed to slow: ");
-        defaultFan.setSpeed(Fan.SLOW);
-        System.out.println(defaultFan.getSpeed());
-
-        System.out.println("Changing the custom fan's radius to (not sure how but...): ");
-        customFan.setRadius(3);
-        System.out.println(customFan.getRadius());
         
-        System.out.println("Changing the custom fan's color to: ");
+        defaultFan.setOn(true);
+        System.out.println("Changing the default fan's on status to: " + defaultFan.getOn());
+        
+        defaultFan.setSpeed(Fan.SLOW);
+        System.out.println("Changing the default fan's speed to: " + defaultFan.getSpeed() 
+        + " (SLOW)");
+        
+        customFan.setRadius(3);
+        System.out.println("Changing the custom fan's radius to (not sure how but...): " + 
+        customFan.getRadius());
+        
         customFan.setColor("dirty");
-        System.out.println(customFan.getColor());
+        System.out.println("Changing the custom fan's color to: " + customFan.getColor());
 
         System.out.println("");
         System.out.println("");
