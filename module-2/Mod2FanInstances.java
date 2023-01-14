@@ -1,55 +1,37 @@
 /*Robin Pindel
- * Module 1 Fan Class Assignment
- * 1/5/2023*/
+ * Module 2 Coding Assignment - UseFan Class
+ * 1/14/2023*/
 
-import module2package.Fan;
-
- /*Public class of the file that will contain the main method for creating instances of Fan and 
- * executing code regarding these instances*/
 public class Mod2FanInstances{
-    //Main method
-    public static void main(String[] args){
-        //Create two instances of fan, one default and one custom
-        Fan defaultFan = new Fan();
-        Fan customFan = new Fan(3, true, 100, "pink");
+    public static void main(String[] args){ 
+        //Create collection of Fan instances
+        Fan fanCollection[] = new Fan[4];
 
-        /*Print out details about the fan instances: initial state, changes made, and current state
-         * after changes*/
-        System.out.println("");
-        System.out.println("");
-        System.out.println("The default-built fan's initial state is: ");   
-        System.out.println(defaultFan);
-        System.out.println("");
-        System.out.println("The custom-built fan's initial state is: ");
-        System.out.println(customFan);
-        System.out.println("");
-        System.out.println("");
+        //Populate collection of Fan instances
+        fanCollection[0] = new Fan(0, false, 1, "Purple");
+        fanCollection[1] = new Fan(1, true, 2, "Olive");
+        fanCollection[2] = new Fan(2, false, 2, "Melon");
+        fanCollection[3] = new Fan(3, true, 3, "Beige");
+
+        //Create scanner for user input
+        Scanner input = new Scanner(System.in);
+        System.out.println("Which fan would you like to see the details for? ");
+        System.out.println("Please enter a number 1, 2, 3, 4, or 5.  5 will provide details for" + 
+        " all fans.");
+        int fanChoice = input.nextInt();
+        int fanIndex = fanChoice - 1;
         
-        defaultFan.setOn(true);
-        System.out.println("Changing the default fan's on status to: " + defaultFan.getOn());
-        
-        defaultFan.setSpeed(Fan.SLOW);
-        System.out.println("Changing the default fan's speed to: " + defaultFan.getSpeed() 
-        + " (SLOW)");
-        
-        customFan.setRadius(3);
-        System.out.println("Changing the custom fan's radius to (not sure how but...): " + 
-        customFan.getRadius());
-        
-        customFan.setColor("dirty");
-        System.out.println("Changing the custom fan's color to: " + customFan.getColor());
-
-        System.out.println("");
-        System.out.println("");
-        System.out.println("The default-built fan's current specifications are: ");   
-        System.out.println(defaultFan);
-        System.out.println("");
-        System.out.println("The custom-built fan's current specifications are: ");
-        System.out.println(customFan);
-        System.out.println("");
-        System.out.println("");
-
-
-
+        if (fanChoice >= 1 && fanChoice <= 4){
+            System.out.println("The details of Fan #" + fanChoice + " are:");
+            UseFans.printFanDetails(fanCollection[fanIndex]);
+        }
+        else{
+            for (int i = 0; i < fanCollection.length; i++){
+            int fanNumber = i +1;
+            System.out.println("The details of Fan #" + fanNumber + " are:");
+            UseFans.printFanDetails(fanCollection[i]);
+            }
+        }
+        input.close();
     }
 }

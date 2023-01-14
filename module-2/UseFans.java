@@ -2,8 +2,7 @@
  * Module 2 Coding Assignment - UseFan Class
  * 1/14/2023*/
 
-
-import module2package.Fan;
+import module2package.*;
 import java.util.*;
 
 public class UseFans {
@@ -25,8 +24,27 @@ public class UseFans {
         int fanChoice = input.nextInt();
         int fanIndex = fanChoice - 1;
         
-        printFanDetails(fanCollection[fanIndex]);
-        
+        if (fanChoice >= 1 && fanChoice <= 4){
+            System.out.println("The details of Fan #" + fanChoice + " are:");
+            printFanDetails(fanCollection[fanIndex]);
+        }
+        else{
+            for (int i = 0; i < fanCollection.length; i++){
+            int fanNumber = i +1;
+            System.out.println("The details of Fan #" + fanNumber + " are:");
+            printFanDetails(fanCollection[i]);
+            }
+        }
         input.close();
     }
+
+    //Method to print a specific Fan instance details
+    public static void printFanDetails(Fan choice){
+        System.out.println("");
+        System.out.println("Speed: " + choice.getSpeed());
+        System.out.println("On Status: " + choice.getOn());
+        System.out.println("Radius: " + choice.getRadius());
+        System.out.println("Color: " + choice.getColor());
+        System.out.println("");          
+    }    
 }

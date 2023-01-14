@@ -68,20 +68,4 @@ public class Fan{
         System.out.println();
         return "On: " + on + ", Speed: " + speed + ", Radius: " + radius + ", Color: " + color;
     }
-
-    //Method to print a non-specific Fan instance details
-    public void printFanDetails(){
-
-    }
-
-    //Method to print a specific Fan instance details
-    public void printFanDetails(Fan choice){
-        System.out.println("");
-        System.out.println("The details of fan #" + choice + " are:");
-        System.out.println("Speed: " + choice.getSpeed());
-        System.out.println("On Status: " + choice.getOn());
-        System.out.println("Radius: " + choice.getRadius());
-        System.out.println("Color: " + choice.getColor());
-        System.out.println("");          
-    }
 }
