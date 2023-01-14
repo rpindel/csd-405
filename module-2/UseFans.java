@@ -18,9 +18,13 @@ public class UseFans {
 
         //Create scanner for user input
         Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to the Fan Place!");
+        System.out.println("");
         System.out.println("Which fan would you like to see the details for? ");
+        System.out.println("");
         System.out.println("Please enter a number 1, 2, 3, 4, or 5.  5 will provide details for" + 
         " all fans.");
+        System.out.println("");
         int fanChoice = input.nextInt();
         int fanIndex = fanChoice - 1;
         
