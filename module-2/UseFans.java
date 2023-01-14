@@ -1,5 +1,5 @@
 /*Robin Pindel
- * Module 2 Coding Assignment - UseFan Class
+ * Module 2 Coding Assignment - UseFan Class with updates to Fan Class
  * 1/14/2023*/
 
 import module2package.*;

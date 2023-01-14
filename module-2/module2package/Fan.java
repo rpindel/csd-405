@@ -1,3 +1,7 @@
+/*Robin Pindel
+ * Module 2 Coding Assignment - UseFan Class with updates to Fan Class
+ * 1/14/2023*/
+
 package module2package;
 
 //Class that will serve as template for Fan instances
