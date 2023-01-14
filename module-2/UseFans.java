@@ -29,12 +29,14 @@ public class UseFans {
         int fanIndex = fanChoice - 1;
         
         if (fanChoice >= 1 && fanChoice <= 4){
+            System.out.println("");
             System.out.println("The details of Fan #" + fanChoice + " are:");
             printFanDetails(fanCollection[fanIndex]);
         }
         else{
             for (int i = 0; i < fanCollection.length; i++){
             int fanNumber = i +1;
+            System.out.println("");
             System.out.println("The details of Fan #" + fanNumber + " are:");
             printFanDetails(fanCollection[i]);
             }
