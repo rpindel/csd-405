@@ -2,10 +2,10 @@ package module2package;
 
 //Class that will serve as template for Fan instances
 public class Fan{
-    static final int STOPPED = 0;
-    static final int SLOW = 1;
-    static final int MEDIUM = 2;
-    static final int FAST = 3;
+    public static final int STOPPED = 0;
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
     private int speed = STOPPED;
     private boolean on = false;
     private int radius = 6;
