@@ -68,57 +68,58 @@ class Fan{
     public Fan(){}
 
     public Fan(int customSpeed, boolean customOn, int customRadius, String customColor){
-        speed = customSpeed;
-        on = customOn;
-        radius= customRadius;
-        color = customColor;
+        this.speed = customSpeed;
+        this.on = customOn;
+        this.radius= customRadius;
+        this.color = customColor;
     }
 
     //setter for fan speed number value
     public void setSpeed(int setSpeed){
-        if(on == true){
-            speed = setSpeed;
+        if(this.on == true){
+            this.speed = setSpeed;
         }
     }
     
     //getter for fan speed number value
     public int getSpeed(){
-        return speed;
+        return this.speed;
     }
 
     //setter for fan on state boolean value
     public void setOn(boolean setOn){
-        on = setOn;
+        this.on = setOn;
     }
 
     //getter for fan on state boolean value
     public boolean getOn(){
-        return on;
+        return this.on;
     }
 
     //setter for fan radius number value
     public void setRadius(int setRadius){
-        radius = setRadius;
+        this.radius = setRadius;
     }
 
     //getter for fan radius number value
     public int getRadius(){
-        return radius;
+        return this.radius;
     }
 
     //setter for fan color value
     public void setColor(String setColor){
-        color = setColor;
+        this.color = setColor;
     }
 
     //getter for fan color value
     public String getColor(){
-        return color;
+        return this.color;
     }
 
     //toString() method override to customize the results
     public String toString(){
         System.out.println();
-        return "On: " + on + ", Speed: " + speed + ", Radius: " + radius + ", Color: " + color;
+        return "On: " + this.on + ", Speed: " + this.speed + ", Radius: " + this.radius + ", Color: " 
+        + this.color;
     }
 }
