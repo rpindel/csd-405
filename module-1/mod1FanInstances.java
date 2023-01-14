@@ -5,7 +5,7 @@
 
 /*Public class of the file that will contain the main method for creating instances of Fan and 
  * executing code regarding these instances*/
-public class mod1FanInstances{
+public class Mod1FanInstances{
     //Main method
     public static void main(String[] args){
         //Create two instances of fan, one default and one custom
