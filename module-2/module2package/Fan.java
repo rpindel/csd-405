@@ -5,7 +5,7 @@
 package module2package;
 
 //Class that will serve as template for Fan instances
-public class Fan{
+public class Fan {
     public static final int STOPPED = 0;
     public static final int SLOW = 1;
     public static final int MEDIUM = 2;

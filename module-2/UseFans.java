@@ -18,6 +18,8 @@ public class UseFans {
 
         //Create scanner for user input
         Scanner input = new Scanner(System.in);
+        
+        //Ask user which fan they would like to know about
         System.out.println("Welcome to the Fan Place!");
         System.out.println("");
         System.out.println("Which fan would you like to see the details for? ");
@@ -28,6 +30,7 @@ public class UseFans {
         int fanChoice = input.nextInt();
         int fanIndex = fanChoice - 1;
         
+        //Print details about user's chosen fan (single instance) or all (total collection)
         if (fanChoice >= 1 && fanChoice <= 4){
             System.out.println("");
             System.out.println("The details of Fan #" + fanChoice + " are:");
@@ -35,7 +38,7 @@ public class UseFans {
         }
         else{
             for (int i = 0; i < fanCollection.length; i++){
-            int fanNumber = i +1;
+            int fanNumber = i + 1;
             System.out.println("");
             System.out.println("The details of Fan #" + fanNumber + " are:");
             printFanDetails(fanCollection[i]);
@@ -44,7 +47,7 @@ public class UseFans {
         input.close();
     }
 
-    //Method to print a specific Fan instance details
+    //Method to print Fan instance details
     public static void printFanDetails(Fan choice){
         System.out.println("");
         System.out.println("Speed: " + choice.getSpeed());
