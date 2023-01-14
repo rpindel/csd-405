@@ -27,7 +27,7 @@ public class Fan{
 
     //setter for fan speed number value
     public void setSpeed(int setSpeed){
-        if(on == true){
+        if(this.on == true){
             this.speed = setSpeed;
         }
     }
