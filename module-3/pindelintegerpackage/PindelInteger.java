@@ -129,6 +129,7 @@ public class PindelInteger{
     }
 
     //Non-static method int arg to determine if int values are equal
+    //CHANGE TO BOOLEAN!!!
     public String equals(int value){
         if (this.robin == value){
             return "Equal (int method)";
@@ -137,6 +138,7 @@ public class PindelInteger{
     }
 
     //Non-static method Integer arg to determine if int values are equal
+    //CHANGE TO BOOLEAN!!!
     public String equals(Integer value){
         if (this.robin == value){
             return "Equal (Integer method)";
