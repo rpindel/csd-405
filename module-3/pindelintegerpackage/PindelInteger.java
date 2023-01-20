@@ -5,8 +5,11 @@
 
 package pindelintegerpackage;
 
-public class PindelInteger {
+public class PindelInteger{
     private int robin;
+
+    public PindelInteger(){
+    }
 
     public PindelInteger(int robin){
         this.robin = robin;
@@ -20,113 +23,125 @@ public class PindelInteger {
         this.robin = robin;
     }
 
-    //flesh out
-    public boolean isEven(){
+    //Non-static method no-arg to determine if created instance integer is even
+    public String isEven(){
         if (this.robin % 2 == 0){
-            return true;
+            return "Yes (No-arg method used)";
         }
         else{
-            return false;
+            return "No (No-arg method used)";
         }
     }
 
-    //flesh out
-    public boolean isOdd(){
+    //Non-static method no-arg to determine if created instance integer is odd
+    public String isOdd(){
         if (this.robin % 2 != 0){
-            return true;
+            return "Yes (No-arg method used)";
         }
         else{
-            return false;
+            return "No (No-arg method used)";
         }
     }
 
-    //flesh out
-    public boolean isPrime(){
+    //Non-static method no-arg to determine if created instance integer is prime
+    public String isPrime(){
         if (this.robin == 1){
-            return false;
+            return "No (No-arg method used)";
         }
         else {
             for (int i = 2; i <= this.robin / 2; i++){
                 if (this.robin % i == 0){
-                    return false;
+                    return "No (No-arg method used)";
                 }      
             }
-            return true;
+            return "Yes (No-arg method used)";
         }    
     }
-    
-    //flesh out
-    public static boolean isEven(int robin){
+
+    //Static method int arg to determine if created instance integer is even
+    public static String isEven(int robin){
         if (robin % 2 == 0){
-            return true;
+            return "Yes (int arg method used)";
         }
         else{
-            return false;
+            return "No (int arg method used)";
         }
     }
 
-    //flesh out
-    public static boolean isOdd(int robin){
+    //Static method int arg to determine if created instance integer is odd
+    public static String isOdd(int robin){
         if (robin % 2 != 0){
-            return true;
+            return "Yes (int arg method used)";
         }
         else{
-            return false;
+            return "No (int arg method used)";
         }
     }
 
-    //flesh out
-    public static boolean isPrime(int robin){
-        boolean isPrime = false;
-        for (int i = 2; i <= robin / 2; i++){
-            if (robin % i == 0){
-                isPrime = true;
-                break;
-            }
-        }           
-        if (isPrime == true){
-            return true;
+    //Static method int arg to determine if created instance integer is prime
+    public static String isPrime(int robin){
+        if (robin == 1){
+            return "No (int arg method used)";
         }
-        else{
-            return false;
+        else {
+            for (int i = 2; i <= robin / 2; i++){
+                if (robin % i == 0){
+                    return "No (int arg method used)";
+                }      
+            }
+            return "Yes (int arg method used)";
         } 
     }
 
-    //flesh out
-    public boolean isEven(Integer robin){
+    //Static method Integer arg to determine if created instance integer is even
+    public static String isEven(Integer robin){
         if (robin % 2 == 0){
-            return true;
+            return "Yes (Integer arg method used)";
         }
         else{
-            return false;
+            return "No (Integer arg method used)";
         }
     }
     
-    //flesh out
-    public boolean isOdd(Integer robin){
+    //Static method Integer arg to determine if created instance integer is odd
+    public static String isOdd(Integer robin){
         if (robin % 2 != 0){
-            return true;
+            return "Yes (Integer arg method used)";
         }
         else{
-            return false;
+            return "No (Integer arg method used)";
         }
     }
     
-    //flesh out
-    public boolean isPrime(Integer robin){
-        boolean isPrime = false;
-        for (int i = 2; i <= robin / 2; i++){
-            if (robin % i == 0){
-                isPrime = true;
-                break;
-            }
-        }           
-        if (isPrime == true){
-            return true;
+    //Static method Integer arg to determine if created instance integer is prime
+    public static String isPrime(Integer robin){
+        if (robin == 1){
+            return "No (Integer arg method used)";
         }
-        else{
-            return false;
+        else {
+            for (int i = 2; i <= robin / 2; i++){
+                if (robin % i == 0){
+                    return "No (Integer arg method used)";
+                }      
+            }
+            return "Yes (Integer arg method used)";
+        }  
+    }
+
+    //Non-static method int arg to determine if int values are equal
+    public String equals(int value){
+        if (this.robin == value){
+            return "Equal (int method)";
         } 
+        return "Not Equal (int method)";
+    }
+
+    //Non-static method Integer arg to determine if int values are equal
+    public String equals(Integer value){
+        if (this.robin == value){
+            return "Equal (Integer method)";
+        } 
+        return "Not Equal (Integer method)";
     }
 } 
 
