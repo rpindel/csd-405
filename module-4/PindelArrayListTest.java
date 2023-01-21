@@ -7,12 +7,15 @@ import java.util.ArrayList;
 
 public class PindelArrayListTest{
     //Main method
-    public static void main(String[] args) {
+    public static void main(String[] args){
         //Creat ArrayList
         //Populate ArrayList with user inputs until 0
-        //Process ArrayList for largest value
-    
-    public static Integer max(ArrayList list){}
-            //Display largest value to user
+    }
+
+    public static Integer max(ArrayList list){
+        //Process ArrayList for largest value    
+        //Display largest value to user
+        Integer largest = 0;
+        return largest;
     }
 }
