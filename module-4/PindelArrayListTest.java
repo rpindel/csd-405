@@ -32,14 +32,17 @@ public class PindelArrayListTest{
         System.out.println("The largest (max) integer value you entered was: " + max(arrayList));
         System.out.println("The size of your ArrayList was: " + arrayList.size());
         System.out.print("Your ArrayList values were: ");
-        for (int i = 0; i < arrayList.size(); i++){
-            System.out.print(arrayList.get(i) + " ");
-        }
+            for (int i = 0; i < arrayList.size(); i++){
+                System.out.print((Integer)arrayList.get(i) + " ");
+            }
+        System.out.println("");
         System.out.println("");
 
         /*ArrayList<Integer> zeroList = new ArrayList<>();
         System.out.println("The zeroList largest is: " + max(zeroList));
         System.out.println(zeroList.size());*/
+        
+        input.close();
     }
 
     public static Integer max(ArrayList list){
