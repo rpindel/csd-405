@@ -4,7 +4,6 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.stream.StreamSupport;
 
 
 public class PindelArrayListTest{
@@ -17,10 +16,10 @@ public class PindelArrayListTest{
         //Populate ArrayList with user inputs until 0
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your integers.  Please note that input ends when a 0 is entered. ");
-        int intValue;
+        Integer intValue;
 
         do {
-            intValue = input.nextInt();
+            intValue = (Integer)input.nextInt();
             if (intValue != 0)
                 arrayList.add(intValue);
             else {
@@ -31,7 +30,7 @@ public class PindelArrayListTest{
     
         System.out.println("");
         System.out.println("The largest (max) integer value you entered was: " + max(arrayList));
-        System.out.println("The size of your ArrayList is: " + arrayList.size());
+        System.out.println("The size of your ArrayList was: " + arrayList.size());
         System.out.print("Your ArrayList values were: ");
         for (int i = 0; i < arrayList.size(); i++){
             System.out.print(arrayList.get(i) + " ");
@@ -58,7 +57,6 @@ public class PindelArrayListTest{
                 }
             }
         }    
-
         return largest;
     }
 }
