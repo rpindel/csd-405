@@ -13,7 +13,7 @@ public class PindelArrayListTest{
         ArrayList<Integer> arrayList = new ArrayList<>();
         
         //Create scanner for user input
-        //Populate ArrayList with user inputs until 0
+        //Populate ArrayList with user inputs until 0 (includes 0 in ArrayList still)
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your integers.  Please note that input ends when a 0 is entered. ");
         Integer intValue;
@@ -28,6 +28,7 @@ public class PindelArrayListTest{
             }
         } while (intValue != 0);
     
+        //Display details about the user's ArrayList and values
         System.out.println("");
         System.out.println("The largest (max) integer value you entered was: " + max(arrayList));
         System.out.println("The size of your ArrayList was: " + arrayList.size());
@@ -37,23 +38,18 @@ public class PindelArrayListTest{
             }
         System.out.println("");
         System.out.println("");
-
-        /*ArrayList<Integer> zeroList = new ArrayList<>();
-        System.out.println("The zeroList largest is: " + max(zeroList));
-        System.out.println(zeroList.size());*/
         
         input.close();
     }
 
     public static Integer max(ArrayList list){
-        //Process ArrayList for largest value    
-        //Display largest value to user
+        //Process ArrayList for largest value
         Integer largest = 0;
 
         if (list.size() == 0){
             return 0;
         }
-        else{
+        else {
             for (int i = 0; i < list.size(); i++){
                 if ((int)list.get(i) > largest){
                     largest = (int)list.get(i);
