@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Mod5OOBExceptionTesting {
     //main method
-    public static void main(String[] args){
+    public static void main(String[] args) throws IndexOutOfBoundsException{
         //create ArrayList
         ArrayList<String> arrayList = new ArrayList<>();
         
@@ -30,10 +30,12 @@ public class Mod5OOBExceptionTesting {
         //Scanner created for user input
         Scanner input = new Scanner(System.in);   
 
-        //Ask user which Pokemon name they would like to see again
+        //Ask user which Pokemon name they would like to see again, input as String convert 
+        //through Integer to int
         System.out.println("");
-        System.out.println("Which Pokemon would you like to see again?  Please enter the number.");
-        int intValue = input.nextInt();
+        System.out.println("Which Pokemon name would you like to see again?  Please enter the number.");
+        String s = input.nextLine();
+        int intValue = Integer.parseInt(s);
         intValue = intValue - 1;
         
         //Try-catch to handle exception where user selects a number not in the ArrayList
