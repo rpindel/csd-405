@@ -11,7 +11,8 @@
     public static void main(String[] args) throws IOException {
         //create file data.file if it does not exist        
         try {
-            File dataFile = new File("C:\\Users\\Coding\\csd\\csd-405\\module-5\\data.file");
+            //File dataFile = new File("C:\\Users\\Coding\\csd\\csd-405\\module-5\\data.file");
+            File dataFile = new File(".\\data.file");
             
             if (dataFile.createNewFile()){
                 System.out.println("");
@@ -37,8 +38,9 @@
         //each int should be separated by a space
         //close data.file
         try {
-            FileWriter dataFileWriter = new FileWriter("C:\\Users\\Coding\\csd\\csd-405\\" + 
-            "module-5\\data.file", true);
+            //FileWriter dataFileWriter = new FileWriter("C:\\Users\\Coding\\csd\\csd-405\\" + 
+            //"module-5\\data.file", true);
+            FileWriter dataFileWriter = new FileWriter(".\\data.file", true);
             System.out.println("data.file is open for writing.");
             System.out.println("Writing 10 random integers 1-100.");
             for (int i = 0; i < 10; i++){
@@ -59,8 +61,8 @@
         //reopen data.file
         //read and display data.file
         try {
-            File dataFile = new File("C:\\Users\\Coding\\csd\\csd-405\\" + 
-            "module-5\\data.file");
+            //File dataFile = new File("C:\\Users\\Coding\\csd\\csd-405\\module-5\\data.file");
+            File dataFile = new File(".\\data.file");
             Scanner myReader = new Scanner(dataFile);
             System.out.println("data.file is open for reading.");
             while (myReader.hasNext()){
