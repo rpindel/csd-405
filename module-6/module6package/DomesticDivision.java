@@ -15,7 +15,7 @@ public class DomesticDivision extends Division {
 
     @Override
     public void display(){
-        System.out.println("The details for this Domestic Division are: ");
+        System.out.println("The details for this Domestic Division of Pokemon.2 are: ");
         System.out.println("Name: " + getName());
         System.out.println("Account Number: " + getAccountNumber());
         System.out.println("State: " + state);

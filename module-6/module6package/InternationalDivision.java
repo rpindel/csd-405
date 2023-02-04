@@ -18,7 +18,7 @@ public class InternationalDivision extends Division {
 
     @Override
     public void display(){
-        System.out.println("The details for this International Division are: ");
+        System.out.println("The details for this International Division of Pokemon.2 are: ");
         System.out.println("Name: " + getName());
         System.out.println("Account Number: " + getAccountNumber());
         System.out.println("Country: " + country);
