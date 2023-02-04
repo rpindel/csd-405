@@ -16,8 +16,7 @@ public abstract class Division {
     }
 
     //Abstract display method for sublclasses to override
-    protected abstract void display(){
-    }
+    protected abstract void display();
 
     //Method to protect name and retrieve as needed
     public String getName(){
