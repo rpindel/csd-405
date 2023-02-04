@@ -4,16 +4,15 @@
  */
 
 package module6package;
-import module6package.*;
 
 public class UseDivision {
     public static void main(String [] args){
-        Division pokemon = new InternationalDivision("Pokemon International", "12345", "Japan", 
+        Division pokemon = new InternationalDivision("Pokemon.2 Japan ", "10001", "Japan", 
         "Japanese");
-        Division sushi = new InternationalDivision("Sushi Amazing", "10201", "New Zealand", 
+        Division sushi = new InternationalDivision("Pokemon.2 New Zealand", "10011", "New Zealand", 
         "English, Japanese");
-        Division farm = new DomesticDivision("Farm Implements, LLC", "56765", "Nebraska");
-        Division spackle = new DomesticDivision("Spackletastic", "19991", "Maine");
+        Division farm = new DomesticDivision("Pokemon.2 Main", "10000", "Wisconsin");
+        Division spackle = new DomesticDivision("Pokemon.2 Pacific", "10021", "Hawaii");
     
         System.out.println("");
         pokemon.display();
