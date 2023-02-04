@@ -1,6 +1,6 @@
 /*Robin Pindel
  * 2/3/2023
- * Module 6 Domestic Division Class
+ * Module 6 Use Division Class
  */
 
 package module6package;
