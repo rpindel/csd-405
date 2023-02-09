@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         Button btOK = new Button("OK");
         StackPane stack = new StackPane();
@@ -20,6 +20,25 @@ public class Main extends Application {
         circle.setFill(Color.PINK);
         stack.getChildren().addAll(circle,btOK);
         Scene scene = new Scene(stack, 200, 200);
+        primaryStage.setTitle("JavaFXTest");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }*/
+
+    @Override
+    public void start(Stage primaryStage) {
+        Pane hbox = new HBox();
+        Circle circle1 = new Circle(5, 50, 50);
+        Circle circle2 = new Circle(5, 50, 50);
+        Circle circle3 = new Circle(5, 50, 50);
+        circle1.setStroke(Color.BLACK);
+        circle1.setFill(Color.ORANGE);
+        circle2.setStroke(Color.BLACK);
+        circle2.setFill(Color.WHITE);
+        circle3.setStroke(Color.BLACK);
+        circle3.setFill(Color.GREEN);
+        hbox.getChildren().addAll(circle1, circle2, circle3);
+        Scene scene = new Scene(hbox, 310, 110);
         primaryStage.setTitle("JavaFXTest");
         primaryStage.setScene(scene);
         primaryStage.show();
