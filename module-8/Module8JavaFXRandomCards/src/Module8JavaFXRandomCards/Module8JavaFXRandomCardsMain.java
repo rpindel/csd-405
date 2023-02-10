@@ -3,15 +3,14 @@
  * 2/10/2023
  * 
  * Reference
- * Borderpane (javafx 8). (2015, February 10). Retrieved February 9, 2023, 
- * from https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html
+ * LIANG, Y. D. A. N. I. E. L. (2019). 
+ * Introduction to java programming and Data Structures. PRENTICE HALL. 
  * Pages 441 and 586
  */
 package Module8JavaFXRandomCards;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
