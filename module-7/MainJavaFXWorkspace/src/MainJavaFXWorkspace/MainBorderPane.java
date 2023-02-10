@@ -20,12 +20,39 @@ public class MainBorderPane extends Application {
     @Override
     public void start(Stage primaryStage) {
         BorderPane bPane = new BorderPane();
-        bPane.setTop(new CustomPane("Top"));
-        bPane.setRight(new CustomPane("Right"));
-        bPane.setBottom(new CustomPane("Bottom"));
-        bPane.setLeft(new CustomPane("Left"));
-        bPane.setCenter(new CustomPane("Center"));
+        CustomPane cPDead = new CustomPane("Is Dead?");
+        CustomPane cPMana = new CustomPane("Low Mana?");
+        CustomPane cPPoisoned = new CustomPane("Is Poisoned?");
+        CustomPane cPHealth = new CustomPane("Low Health?");
         
+        bPane.setTop(new CustomPane("Character Name"));
+        bPane.setRight(cPMana);
+        bPane.setBottom(cPDead);
+        bPane.setLeft(cPHealth);
+        bPane.setCenter(cPPoisoned);
+        
+        //boolean dead = false;
+        //boolean lowMana = false;
+        //boolean poisoned = false;
+        //boolean lowHealth = false;
+        boolean dead = true;
+        boolean lowMana = true;
+        boolean poisoned = true;
+        boolean lowHealth = true;
+
+        if (dead == true) {
+            cPDead.setStyle("-fx-background-color: gray");
+        }
+        if (lowMana == true) {
+            cPMana.setStyle("-fx-background-color: aqua blue");
+        }
+        if (poisoned == true) {
+            cPPoisoned.setStyle("-fx-background-color: purple");
+        }
+        if (lowHealth == true) {
+            cPHealth.setStyle("-fx-background-color: red");
+        }
+
         Scene scene = new Scene(bPane);
         primaryStage.setTitle("JavaFXTest");
         primaryStage.setScene(scene);
@@ -37,7 +64,7 @@ public class MainBorderPane extends Application {
             getChildren().add(new Label(title));
             setStyle("-fx-border-color: black");
             setPadding(new Insets(20, 20, 20, 20));
-        }
+        }  
     }
 
 public static void main(String[] args) {

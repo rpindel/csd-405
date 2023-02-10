@@ -23,6 +23,7 @@ public class MainHBox extends Application {
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(10, 10, 10, 10));
         hbox.setAlignment(Pos.CENTER);
+        //hbox.setStyle("-fx-border-color: black");
         StackPane stack = new StackPane();
         
         Rectangle r1 = new Rectangle(0, 0, 50, 100);
