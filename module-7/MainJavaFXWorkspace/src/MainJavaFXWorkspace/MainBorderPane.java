@@ -38,16 +38,16 @@ public class MainBorderPane extends Application {
         boolean lowHealth = true;
 
         if (dead == true) {
-            cPDead.setStyle("-fx-background-color: gray");
+            cPDead.setStyle("-fx-background-color: gray;" + "-fx-border-color: black;" + "-fx-font-weight: bold;");
         }
         if (lowMana == true) {
-            cPMana.setStyle("-fx-background-color: aqua blue");
+            cPMana.setStyle("-fx-background-color: aqua blue;" + "-fx-border-color: black;" + "-fx-font-weight: bold;");
         }
         if (poisoned == true) {
-            cPPoisoned.setStyle("-fx-background-color: purple");
+            cPPoisoned.setStyle("-fx-background-color: purple;" + "-fx-border-color: black;" + "-fx-font-weight: bold;");
         }
         if (lowHealth == true) {
-            cPHealth.setStyle("-fx-background-color: red");
+            cPHealth.setStyle("-fx-background-color: red;" + "-fx-border-color: black;" + "-fx-font-weight: bold;");
         }
 
         Scene scene = new Scene(bPane);
@@ -59,7 +59,7 @@ public class MainBorderPane extends Application {
     class CustomPane extends StackPane {
         public CustomPane(String title) {
             getChildren().add(new Label(title));
-            setStyle("-fx-border-color: black");
+            setStyle("-fx-border-color: black;" + "-fx-font-weight: bold;");
             setPadding(new Insets(20, 20, 20, 20));
         }  
     }

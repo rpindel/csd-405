@@ -38,7 +38,7 @@ public class MainHBox extends Application {
         
         hbox.getChildren().addAll(r1, r2, r3);
         stack.getChildren().addAll(hbox, border, text);
-        
+
         Scene scene = new Scene(stack, 220, 170);
         primaryStage.setTitle("JavaFXTest");
         primaryStage.setScene(scene);
