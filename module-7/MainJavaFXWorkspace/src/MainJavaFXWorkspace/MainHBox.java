@@ -9,7 +9,6 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.*;
-//import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.*;
 import javafx.scene.shape.*;
@@ -23,7 +22,6 @@ public class MainHBox extends Application {
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(10, 10, 10, 10));
         hbox.setAlignment(Pos.CENTER);
-        //hbox.setStyle("-fx-border-color: black");
         StackPane stack = new StackPane();
         
         Rectangle r1 = new Rectangle(0, 0, 50, 100);
@@ -32,11 +30,8 @@ public class MainHBox extends Application {
         Rectangle border = new Rectangle(0, 0, 150, 100);
         Text text = new Text("Ireland");
         
-        //r1.setStroke(Color.ORANGE);
         r1.setFill(Color.ORANGE);
-        //r2.setStroke(Color.WHITE);
         r2.setFill(Color.WHITE);
-        //r3.setStroke(Color.GREEN);
         r3.setFill(Color.GREEN);
         border.setStroke(Color.BLACK);
         border.setFill(null);
