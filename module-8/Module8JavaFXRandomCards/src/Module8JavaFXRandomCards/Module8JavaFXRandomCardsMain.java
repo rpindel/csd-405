@@ -46,9 +46,8 @@ public class Module8JavaFXRandomCardsMain extends Application {
     ImageView imageView4 = new ImageView(card4);
 
     //Create HBox to hold card images ImageViews
-    HBox hbox = new HBox();
+    HBox hbox = new HBox(5);
     hbox.setPadding(new Insets(10, 10, 10, 10));
-    hbox.setAlignment(Pos.CENTER);
     
     //Add ImagesViews to HBox
     hbox.getChildren().addAll(imageView1, imageView2, imageView3, imageView4);
