@@ -25,7 +25,8 @@ public class Module9LambdaExampleMain extends Application {
                 "\n\t@Override" +
                 "\n\tpublic void handle(ActionEvent e) {" +
                     "\n\t\ttext.setText(\"You clicked BUTTON X!\");" +
-                "\n\t};");
+                "\n\t}" +
+            "\n});");
         Text text2 = new Text("Please click to transform the code using lambda formatting.");
         StackPane stackpane1 = new StackPane(text1);
         StackPane stackpane2 = new StackPane(text2);    
@@ -49,8 +50,8 @@ public class Module9LambdaExampleMain extends Application {
             "The above is equivalent to:" +
             "\n" +
             "\nbtX.setOnAction((ActionEvent e) -> {" +
-            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
-            "});" +
+                "\n\ttext.setText(\"You clicked BUTTON X!\");" +
+            "\n});" +
             "\n");
         });
 
@@ -59,8 +60,8 @@ public class Module9LambdaExampleMain extends Application {
             "The above is equivalent to:" +
             "\n" +
             "\nbtX.setOnAction((e) -> {" +
-            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
-            "});" +
+            "\n\ttext.setText(\"You clicked BUTTON X!\");" +
+            "\n});" +
             "\n");
         });
 
@@ -69,8 +70,8 @@ public class Module9LambdaExampleMain extends Application {
             "The above is equivalent to:" +
             "\n" +
             "\nbtX.setOnAction(e -> {" +
-            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
-            "});" +
+            "\n\ttext.setText(\"You clicked BUTTON X!\");" +
+            "\n});" +
             "\n");
         });
 
@@ -80,7 +81,7 @@ public class Module9LambdaExampleMain extends Application {
             "\n" +
             "\nbtX.setOnAction(e -> " +
             "\n\ttext.setText(\"You clicked BUTTON X!\")" +
-            ");" +
+            "\n);" +
             "\n"
         ));
 
