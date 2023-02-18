@@ -12,55 +12,79 @@ import javafx.scene.*;
 import javafx.stage.*;
 import javafx.scene.text.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 
 public class Module9LambdaExampleMain extends Application {
     @Override
     public void start(Stage primaryStage){
-        Text text = new Text(25, 25, "Please press a button");
-        StackPane stackpane = new StackPane(text);        
+        Text text1 = new Text (
+            "\n" +
+            "btX.setOnAction(new EventHandler<ActionEvent>() {" +
+                "\n\t@Override" +
+                "\n\tpublic void handle(ActionEvent e) {" +
+                    "\n\t\ttext.setText(\"You clicked BUTTON X!\");" +
+                "\n\t};");
+        Text text2 = new Text("Please click to transform the code using lambda formatting.");
+        StackPane stackpane1 = new StackPane(text1);
+        StackPane stackpane2 = new StackPane(text2);    
         
-        Button btUp = new Button("Arrow Up");
-        Button btRight = new Button("Arrow Right");
-        Button btDown = new Button("Arrow Down");
-        Button btLeft = new Button("Arrow Left");
-        HBox hbox = new HBox(btUp, btRight, btDown, btLeft);
+        Button btLE1 = new Button("Lambda v1");
+        Button btLE2 = new Button("Lambda v2");
+        Button btLE3 = new Button("Lambda v3");
+        Button btLE4 = new Button("Lambda v4");
+        HBox hbox = new HBox(btLE1, btLE2, btLE3, btLE4);
         hbox.setSpacing(10);
         hbox.setAlignment(Pos.CENTER);
 
-        Button btSpace = new Button("Spacebar");
-        StackPane stackpane2 = new StackPane(btSpace);
-
         BorderPane borderpane = new BorderPane();
-        borderpane.setTop(stackpane);
-        borderpane.setCenter(hbox);
-        borderpane.setBottom(stackpane2);
+        borderpane.setTop(stackpane1);
+        borderpane.setCenter(stackpane2);
+        borderpane.setBottom(hbox);
         borderpane.setPadding(new Insets(0, 0, 20, 0));
 
-        btUp.setOnAction((ActionEvent e) -> {
-            text.setText("You pressed UP!");
+        btLE1.setOnAction((ActionEvent e) -> {
+            text2.setText("\n" +
+            "The above is equivalent to:" +
+            "\n" +
+            "\nbtX.setOnAction((ActionEvent e) -> {" +
+            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
+            "});" +
+            "\n");
         });
 
-        btRight.setOnAction((e) -> {
-            text.setText("You pressed RIGHT!");
+        btLE2.setOnAction((e) -> {
+            text2.setText("\n" +
+            "The above is equivalent to:" +
+            "\n" +
+            "\nbtX.setOnAction((e) -> {" +
+            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
+            "});" +
+            "\n");
         });
 
-        btDown.setOnAction(e -> {
-            text.setText("You pressed DOWN!");
+        btLE3.setOnAction(e -> {
+            text2.setText("\n" +
+            "The above is equivalent to:" +
+            "\n" +
+            "\nbtX.setOnAction(e -> {" +
+            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
+            "});" +
+            "\n");
         });
 
-        btLeft.setOnAction(e -> 
-            text.setText("You pressed LEFT!"));
+        btLE4.setOnAction(e -> 
+            text2.setText("\n" +
+            "The above is equivalent to:" +
+            "\n" +
+            "\nbtX.setOnAction(e -> " +
+            "\n\ttext.setText(\"You clicked BUTTON X!\")" +
+            ");" +
+            "\n"
+        ));
 
-        btSpace.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                text.setText("You pressed SPACEBAR!");
-            }
-        });
-
-        Scene scene = new Scene(borderpane, 400, 100);
+        Scene scene = new Scene(borderpane, 400, 300);
         primaryStage.setTitle("Lambda Example");
         primaryStage.setScene(scene);
         primaryStage.show();
