@@ -15,6 +15,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.image.*;
 import javafx.scene.control.*;
@@ -54,7 +55,7 @@ public class Module10RandomCardRefreshMain extends Application {
     hboxCards.getChildren().addAll(imageView1, imageView2, imageView3, imageView4);
 
     //Create Refresh and End buttons and their HBox
-    Button btRfresh = new Button("New Cards?");
+    Button btRfresh = new Button("New Cards");
     Button btEnd = new Button ("End");
     HBox hboxButtons = new HBox(5);
     hboxButtons.getChildren().addAll(btRfresh, btEnd);
@@ -62,11 +63,26 @@ public class Module10RandomCardRefreshMain extends Application {
     hboxCards.setAlignment(Pos.CENTER);
     hboxButtons.setAlignment(Pos.CENTER);
 
+    //Define button actions
+    btRfresh.setOnAction(e -> {
+        System.out.println("Refreshed!");
+        java.util.Collections.shuffle(cardList);
+        imageView1.setImage(new Image("file:rsc\\cards\\" + cardList.get(0) + ".png") );
+        imageView2.setImage(new Image("file:rsc\\cards\\" + cardList.get(1) + ".png"));;
+        imageView3.setImage(new Image("file:rsc\\cards\\" + cardList.get(2) + ".png"));
+        imageView4.setImage(new Image("file:rsc\\cards\\" + cardList.get(3) + ".png"));
+    });
+    
+    btEnd.setOnAction(e -> {
+        System.out.println("Ended!");
+        System.exit(0);
+    });
+
     //Create BorderPane and add to it
     BorderPane borderpane = new BorderPane();
     borderpane.setCenter(hboxCards);
     borderpane.setBottom(hboxButtons);
-
+    borderpane.setStyle("-fx-background-color: pink");
 
     //Create and set the scene then display the stage
     Scene scene = new Scene(borderpane);
