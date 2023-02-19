@@ -12,7 +12,6 @@ import javafx.scene.*;
 import javafx.stage.*;
 import javafx.scene.text.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 
