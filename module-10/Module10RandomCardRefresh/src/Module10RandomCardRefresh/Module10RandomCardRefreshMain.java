@@ -12,19 +12,20 @@ package Module10RandomCardRefresh;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.scene.image.*;
+import javafx.scene.control.*;
 import java.util.*;
-
 
 public class Module10RandomCardRefreshMain extends Application {
  
-//Override the start method of the Application class
+    //Override the start method of the Application class
     @Override
     public void start(Stage primaryStage) {
-    
+
     //Store numbers 1-52 to ArrayList
     ArrayList<Integer> cardList = new ArrayList<>();
     for (int i = 1; i <=52; i++){
@@ -46,14 +47,29 @@ public class Module10RandomCardRefreshMain extends Application {
     ImageView imageView4 = new ImageView(card4);
 
     //Create HBox to hold card images ImageViews
-    HBox hbox = new HBox(5);
-    hbox.setPadding(new Insets(10, 10, 10, 10));
+    HBox hboxCards = new HBox(5);
+    hboxCards.setPadding(new Insets(10, 10, 10, 10));
     
     //Add ImagesViews to HBox
-    hbox.getChildren().addAll(imageView1, imageView2, imageView3, imageView4);
+    hboxCards.getChildren().addAll(imageView1, imageView2, imageView3, imageView4);
+
+    //Create Refresh and End buttons and their HBox
+    Button btRfresh = new Button("New Cards?");
+    Button btEnd = new Button ("End");
+    HBox hboxButtons = new HBox(5);
+    hboxButtons.getChildren().addAll(btRfresh, btEnd);
+    hboxButtons.setPadding(new Insets(10, 10, 10, 10));
+    hboxCards.setAlignment(Pos.CENTER);
+    hboxButtons.setAlignment(Pos.CENTER);
+
+    //Create BorderPane and add to it
+    BorderPane borderpane = new BorderPane();
+    borderpane.setCenter(hboxCards);
+    borderpane.setBottom(hboxButtons);
+
 
     //Create and set the scene then display the stage
-    Scene scene = new Scene(hbox);
+    Scene scene = new Scene(borderpane);
     primaryStage.setTitle("Four random cards");
     primaryStage.setScene(scene);
     primaryStage.show(); 

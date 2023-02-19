@@ -17,8 +17,11 @@ import javafx.geometry.Insets;
 import javafx.scene.control.*;
 
 public class Module9LambdaExampleMain extends Application {
+    //Override the start method of the Application class
     @Override
-    public void start(Stage primaryStage){
+    public void start(Stage primaryStage) {
+        
+        //Display code to convert with Lambda
         Text text1 = new Text (
             "\n" +
             "btX.setOnAction(new EventHandler<ActionEvent>() {" +
@@ -27,10 +30,14 @@ public class Module9LambdaExampleMain extends Application {
                     "\n\t\ttext.setText(\"You clicked BUTTON X!\");" +
                 "\n\t}" +
             "\n});");
+        
         Text text2 = new Text("Please click to transform the code using lambda formatting.");
+        
+        //Add text to individual stackpanes for centering
         StackPane stackpane1 = new StackPane(text1);
         StackPane stackpane2 = new StackPane(text2);    
         
+        //Create buttons and hbox to hold them for user to select Lambda conversion
         Button btLE1 = new Button("Lambda v1");
         Button btLE2 = new Button("Lambda v2");
         Button btLE3 = new Button("Lambda v3");
@@ -39,12 +46,14 @@ public class Module9LambdaExampleMain extends Application {
         hbox.setSpacing(10);
         hbox.setAlignment(Pos.CENTER);
 
+        //Add all elements to a borderpane
         BorderPane borderpane = new BorderPane();
         borderpane.setTop(stackpane1);
         borderpane.setCenter(stackpane2);
         borderpane.setBottom(hbox);
         borderpane.setPadding(new Insets(0, 0, 20, 0));
 
+        //Define all lambda conversion actions
         btLE1.setOnAction((ActionEvent e) -> {
             text2.setText("\n" +
             "The above is equivalent to:" +
@@ -85,6 +94,7 @@ public class Module9LambdaExampleMain extends Application {
             "\n"
         ));
 
+        //Set the scene and display the stage
         Scene scene = new Scene(borderpane, 400, 300);
         primaryStage.setTitle("Lambda Example");
         primaryStage.setScene(scene);
