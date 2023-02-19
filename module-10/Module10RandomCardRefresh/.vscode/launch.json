@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Module10RandomCardRefreshMain",
+            "request": "launch",
+            "mainClass": "Module10RandomCardRefresh.Module10RandomCardRefreshMain",
+            "projectName": "Module10RandomCardRefresh_601e743e",
+            "vmArgs": "--module-path C:\\JavaFX\\javafx-sdk-19.0.2.1\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
