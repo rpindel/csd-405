@@ -15,7 +15,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.image.*;
 import javafx.scene.control.*;
@@ -63,10 +62,14 @@ public class Module10RandomCardRefreshMain extends Application {
     hboxCards.setAlignment(Pos.CENTER);
     hboxButtons.setAlignment(Pos.CENTER);
 
-    //Define button actions
+    //Define Refresh and End button actions
     btRfresh.setOnAction(e -> {
         System.out.println("Refreshed!");
+        
+        //New random shuffle of ArrayList
         java.util.Collections.shuffle(cardList);
+
+        //Set a new card image to ImageViews
         imageView1.setImage(new Image("file:rsc\\cards\\" + cardList.get(0) + ".png") );
         imageView2.setImage(new Image("file:rsc\\cards\\" + cardList.get(1) + ".png"));;
         imageView3.setImage(new Image("file:rsc\\cards\\" + cardList.get(2) + ".png"));
@@ -75,6 +78,8 @@ public class Module10RandomCardRefreshMain extends Application {
     
     btEnd.setOnAction(e -> {
         System.out.println("Ended!");
+
+        //Ends the program with a status code of 0 - Success
         System.exit(0);
     });
 
