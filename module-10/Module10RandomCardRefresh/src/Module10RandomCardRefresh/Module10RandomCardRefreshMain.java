@@ -54,7 +54,7 @@ public class Module10RandomCardRefreshMain extends Application {
     hboxCards.getChildren().addAll(imageView1, imageView2, imageView3, imageView4);
 
     //Create Refresh and End buttons and their HBox
-    Button btRfresh = new Button("New Cards");
+    Button btRfresh = new Button("Refresh");
     Button btEnd = new Button ("End");
     HBox hboxButtons = new HBox(5);
     hboxButtons.getChildren().addAll(btRfresh, btEnd);
