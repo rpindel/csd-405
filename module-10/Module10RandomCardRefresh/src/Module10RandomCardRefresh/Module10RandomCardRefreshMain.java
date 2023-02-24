@@ -1,5 +1,5 @@
 /*Robin Pindel
- * Module 8 JaxaFX Random Cards Assignment
+ * Module 10 JaxaFX Random Cards with Refresh Assignment
  * 2/19/2023
  * 
  * Reference
