@@ -48,15 +48,46 @@ public class Mod11ShapeRandomColorMain extends Application {
     //Add vbox and checkbox to hbox    
     hbox.getChildren().addAll(vbox, checkBox);
 
+    //Make and configure ToggleGroup for radio buttons
+    ToggleGroup togglegroup = new ToggleGroup();
+    radioCircle.setToggleGroup(togglegroup);
+    radioEllipse.setToggleGroup(togglegroup);
+    radioRectangle.setToggleGroup(togglegroup);
+
+    //Toggle group for selected shape
+    Shape shape;
+    switch (togglegroup.getSelectedToggle()) {
+        case radioCircle:
+            Circle circle = new Circle(100);
+            circle.setStroke(Color.RED);
+            circle.setFill(Color.PINK);
+            shape = circle;
+            break;
+        case radioEllipse:
+            Ellipse ellipse = new Ellipse(50, 100);
+            ellipse.setStroke(Color.RED);
+            ellipse.setFill(Color.PINK);
+            shape = ellipse;
+            break;
+        case radioRectangle:
+            Rectangle rectangle = new Rectangle(50, 100);
+            rectangle.setStroke(Color.RED);
+            rectangle.setFill(Color.PINK);
+            shape = rectangle;
+            break;
+        default:
+            break;
+    }
+
     //Testing shape
-    Circle circle = new Circle(100);
-    circle.setStroke(Color.RED);
-    circle.setFill(Color.PINK);
+    //Circle circle = new Circle(100);
+    //circle.setStroke(Color.RED);
+    //circle.setFill(Color.PINK);
 
     //Add things to borderpane
     borderpane.setBottom(hbox);
-    borderpane.setCenter(circle);
-    borderpane.setMargin(circle, 10);
+    borderpane.setCenter(shape);
+    borderpane.setPadding(new Insets(10, 10, 10, 10));
     
     //Create and set the scene then display the stage
     Scene scene = new Scene(borderpane);
