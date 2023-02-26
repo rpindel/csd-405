@@ -84,6 +84,16 @@ public class Mod11ShapeRandomColorMain extends Application {
     //circle.setStroke(Color.RED);
     //circle.setFill(Color.PINK);
 
+    //Checkbox confiuration
+    //If checked, fill with random color
+    //If not checked, no color fill
+    if (checkBox.getChecked() == True) {
+        shape.setFill(Random Color);
+    }
+    else {
+        shape.setFill(None);
+    }
+
     //Add things to borderpane
     borderpane.setBottom(hbox);
     borderpane.setCenter(shape);
