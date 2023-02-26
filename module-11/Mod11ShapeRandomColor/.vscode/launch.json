@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Mod11ShapeRandomColorMain",
+            "request": "launch",
+            "mainClass": "Mod11ShapeRandomColor.Mod11ShapeRandomColorMain",
+            "projectName": "Mod11ShapeRandomColor_db32d223",
+            "vmArgs": "--module-path C:\\JavaFX\\javafx-sdk-19.0.2.1\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
