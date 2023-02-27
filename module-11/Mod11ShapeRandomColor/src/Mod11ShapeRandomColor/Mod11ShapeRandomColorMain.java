@@ -53,7 +53,11 @@ public class Mod11ShapeRandomColorMain extends Application {
 
     //Toggle group for selected shape
     radioCircle.setOnAction(e -> {
-        if (radioCircle.isSelected()) {
+        Random rand = new Random();
+        int r = rand.nextInt(255);
+        int g = rand.nextInt(255);
+        int b = rand.nextInt(255);
+        if (radioCircle.isSelected() && (checkBox.isSelected() == false)) {
             Circle circle = new Circle(25);
             circle.setStroke(Color.BLACK);
             circle.setFill(Color.WHITE);
@@ -61,9 +65,21 @@ public class Mod11ShapeRandomColorMain extends Application {
             stackpane.getChildren().addAll(circle);
             borderpane.setCenter(stackpane);
         }
+        else {
+            Circle circle = new Circle(25);
+            circle.setStroke(Color.BLACK);
+            circle.setFill(Color.rgb(r, g, b));
+            StackPane stackpane = new StackPane();
+            stackpane.getChildren().addAll(circle);
+            borderpane.setCenter(stackpane);
+        }
     });
     radioEllipse.setOnAction(e -> {
-        if (radioEllipse.isSelected()) {
+        Random rand = new Random();
+        int r = rand.nextInt(255);
+        int g = rand.nextInt(255);
+        int b = rand.nextInt(255);
+        if (radioEllipse.isSelected() && (checkBox.isSelected() == false)) {
             Ellipse ellipse = new Ellipse(50, 25);
             ellipse.setStroke(Color.BLACK);
             ellipse.setFill(Color.WHITE);
@@ -71,12 +87,32 @@ public class Mod11ShapeRandomColorMain extends Application {
             stackpane.getChildren().addAll(ellipse);
             borderpane.setCenter(stackpane);
         }
+        else {
+            Ellipse ellipse = new Ellipse(50, 25);
+            ellipse.setStroke(Color.BLACK);
+            ellipse.setFill(Color.rgb(r, g, b));
+            StackPane stackpane = new StackPane();
+            stackpane.getChildren().addAll(ellipse);
+            borderpane.setCenter(stackpane);
+        }
     });
     radioRectangle.setOnAction(e -> {
-        if (radioRectangle.isSelected()) {
+        Random rand = new Random();
+        int r = rand.nextInt(255);
+        int g = rand.nextInt(255);
+        int b = rand.nextInt(255);
+        if (radioRectangle.isSelected()&& (checkBox.isSelected() == false)) {
             Rectangle rectangle = new Rectangle(100, 50);
             rectangle.setStroke(Color.BLACK);
             rectangle.setFill(Color.WHITE);
+            StackPane stackpane = new StackPane();
+            stackpane.getChildren().addAll(rectangle);
+            borderpane.setCenter(stackpane);
+        }
+        else {
+            Rectangle rectangle = new Rectangle(100, 50);
+            rectangle.setStroke(Color.BLACK);
+            rectangle.setFill(Color.rgb(r, g, b));
             StackPane stackpane = new StackPane();
             stackpane.getChildren().addAll(rectangle);
             borderpane.setCenter(stackpane);
