@@ -42,7 +42,7 @@ public class UseFansRedo {
         input.close();
     }
 
-    //Method to print Fan instance details
+    //Method to print single Fan instance details
     public static void printFanDetails(Fan choice){
         System.out.println("");
         System.out.println("Speed: " + choice.getSpeed());
@@ -52,6 +52,7 @@ public class UseFansRedo {
         System.out.println("");          
     }
 
+    //Method to print all Fan intances details
     public static void printFanDetails(Fan[] choice){
         for (int i = 0; i < choice.length; i++){
             int fanNumber = i + 1;
