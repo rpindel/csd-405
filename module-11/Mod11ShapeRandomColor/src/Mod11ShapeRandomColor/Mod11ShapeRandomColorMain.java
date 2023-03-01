@@ -28,24 +28,24 @@ public class Mod11ShapeRandomColorMain extends Application {
     RadioButton radioEllipse = new RadioButton("Ellipse");
     CheckBox checkBox = new CheckBox("Random Color Fill");
 
-    //Make HBox to hold all buttons
-    HBox hbox = new HBox(5);
-    hbox.setPadding(new Insets(10, 10, 10, 10));
-
     //Make VBox to hold radio buttons
     VBox vbox = new VBox();
 
-    //Make BorderPane to hold all nodes
-    BorderPane borderpane = new BorderPane();
-    
     //Add radio buttons to vbox
     vbox.getChildren().addAll(radioCircle, radioEllipse, radioRectangle);
+
+    //Make HBox to hold all buttons
+    HBox hbox = new HBox(5);
+    hbox.setPadding(new Insets(10, 10, 10, 10));
 
     //Add vbox and checkbox to hbox    
     hbox.getChildren().addAll(vbox, checkBox);
     hbox.setAlignment(Pos.CENTER);
 
-    //Add all node to borderpane except for shapes and stackpane nodes defined below
+    //Make BorderPane to hold all nodes
+    BorderPane borderpane = new BorderPane();
+
+    //Add all nodes to borderpane except for shapes and stackpane nodes defined below
     borderpane.setBottom(hbox);
     borderpane.setPadding(new Insets(10, 10, 10, 10));
 
@@ -127,7 +127,7 @@ public class Mod11ShapeRandomColorMain extends Application {
     });
 
     //Configure checkbox actions
-    //Any shape radio button With and without checkbox selected
+    //Any shape radio button with and without checkbox selected
     //Default white fill and random color fill
     //Create/redraw shape and add to new stackpane
     checkBox.setOnAction(e -> {
